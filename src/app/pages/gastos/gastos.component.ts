@@ -14,11 +14,11 @@ export class GastosComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if(this._presupuestoService.presupuesto === 0){
-      this.router.navigate(['/ingresarPresupuesto']);
+  //  if(this._presupuestoService.presupuesto === 0){
+  //    this.router.navigate(['/ingresarPresupuesto']);
     }
    
-    console.log(this._presupuestoService.presupuesto);
-  }
+ //   console.log(this._presupuestoService.presupuesto);
+//  }
 
 }

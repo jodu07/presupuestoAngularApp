@@ -3,12 +3,13 @@
         <h2 class="text-center">Ingrese Presupuesto</h2>
         <div class="card">
             <div class="card-body">
-                <div class="text-center mb-3">
+                <div *ngIf="cantidadIncorrecta" class="text-center mb-3">
                     <span class="badge bg-danger">EL PRESUPUESTO DEBE SER MAYOR A CERO</span>
                 </div>
+                <a href="/gastos">gast</a>
 
                 <input type="number" class="form-control form-control-lg" placeholder="Ingrese presupuesto">
-                <button class="btn btn-secondary btn-lg btn-block mt-2">ACEPTAR</button>
+                <button class="btn btn-secondary btn-lg btn-block mt-2" (click)="agregar()">Ingresar</button>
             </div>
         </div>
     </div>
