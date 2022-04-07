@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { PresupuestoService } from '../../services/presupuesto.service';
+import { Gasto } from '../../interface/gasto.interface';
 
 @Component({
   selector: 'app-lista-gastos',
@@ -9,7 +10,7 @@ import { PresupuestoService } from '../../services/presupuesto.service';
 })
 export class ListaGastosComponent implements OnInit {
 
-  listaGastos:any[]=[];
+  listaGastos:Gasto[]=[];
   presupuesto: number;
   restante: number;
   subscription: Subscription;

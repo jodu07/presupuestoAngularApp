@@ -20,11 +20,8 @@ export class IngresarPresupuestoComponent implements OnInit {
                }
 
   ngOnInit(): void {
-
-    console.log('cantidad: ',this.cantidad);
-
+    
   }
-
 
   agregar(){
     if(this.cantidad > 0){
