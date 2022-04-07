@@ -8,7 +8,12 @@
                 </div>
                 <a href="/gastos">gast</a>
 
-                <input type="number" class="form-control form-control-lg" placeholder="Ingrese presupuesto">
+                <input 
+                type="number" 
+                class="form-control form-control-lg" 
+                placeholder="Ingrese presupuesto"
+                [(ngModel)]="cantidad"
+                name="cantidad">
                 <button class="btn btn-secondary btn-lg btn-block mt-2" (click)="agregar()">Ingresar</button>
             </div>
         </div>

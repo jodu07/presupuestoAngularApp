@@ -21,6 +21,8 @@ export class IngresarPresupuestoComponent implements OnInit {
 
   ngOnInit(): void {
 
+    console.log('cantidad: ',this.cantidad);
+
   }
 
 
@@ -30,6 +32,7 @@ export class IngresarPresupuestoComponent implements OnInit {
       this._presupuestoService.presupuesto = this.cantidad;
       this._presupuestoService.restante = this.cantidad;
       this.router.navigate(['/gastos']);
+      
     }else{
       this.cantidadIncorrecta = true;
     }
