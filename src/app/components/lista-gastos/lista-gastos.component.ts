@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { PresupuestoService } from '../../services/presupuesto.service';
 
 @Component({
   selector: 'app-lista-gastos',
@@ -7,9 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaGastosComponent implements OnInit {
 
-  constructor() { }
+  listaGastos:any[]=[];
+  presupuesto: number;
+  restante: number;
+  subscripcion: Subscription;
+
+  constructor(private _presupuestoService: PresupuestoService) { 
+    this.presupuesto = 0;
+    this.restante = 0;
+
+    this.subscripcion = this._presupuestoService
+
+
+  }
+
+
+
+
+  aplicarColorRestante(){
+
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   ngOnInit(): void {
+
+    this.presupuesto = this._presupuestoService.presupuesto;
+    this.restante = this._presupuestoService.restante
   }
 
 }
